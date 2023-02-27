@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "ex1",
+      "setup": "",
+      "run": "fgrep -q 'https://hub.docker.com/' ex1/ex1.txt",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "ex2&#45;1",
+      "setup": "docker build -t test ex2/",
+      "run": "docker run --rm test",
+      "input": "",
+      "output": "ex2",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "ex2&#45;2",
+      "setup": "docker build -t test ex2/",
+      "run": "docker run --rm test",
+      "input": "",
+      "output": "UTC",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "ex3",
+      "setup": "docker build -t test ex3/",
+      "run": "docker run --rm test | fgrep -q 'hello-world'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 1
+    }
+  ]
+}
